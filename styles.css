@@ -1,0 +1,1255 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    padding: 15px 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.login-btn {
+    background: white;
+    color: #007bff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+}
+
+.cta-btn {
+    background: white;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.idea-listings {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.idea-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.idea-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sell-idea {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+       /* Base responsive styles */
+       * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: white;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #007bff;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2.8rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        color: #007bff;
+    }
+
+    .login-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+        background: #0056b3;
+    }
+
+    @media screen and (max-width: 768px) {
+        .navbar {
+            padding: 0.8rem 1rem;
+        }
+        
+        .nav-links {
+            gap: 1.4rem;
+            font-size: 0.9rem;
+        }
+        
+        .login-btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .logo {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* For very small screens */
+    @media screen and (max-width: 480px) {
+        .nav-links {
+            gap: 0.5rem;
+            font-size: 0.8rem;
+        }
+        
+        .login-btn {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    /* Add padding to body to account for fixed navbar */
+    body {
+        padding-top: 60px;
+    }
+
+    /* Hero section responsiveness */
+    @media screen and (max-width: 768px) {
+        .hero {
+            padding: 2rem 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+        }
+        
+        .search-bar {
+            width: 90%;
+            margin: 1rem auto;
+        }
+        
+        .cta-btn {
+            width: 90%;
+        }
+    }
+
+    /* Idea listings responsiveness */
+    @media screen and (max-width: 768px) {
+        .idea-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            padding: 1rem;
+        }
+    }
+
+    /* Forms responsiveness */
+    @media screen and (max-width: 768px) {
+        .sell-idea form,
+        .about-contact form {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        input, textarea, button {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+    }
+
+    /* Footer responsiveness */
+    @media screen and (max-width: 768px) {
+        .footer {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .footer ul {
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+        
+        .footer li {
+            margin: 0.5rem 0;
+        }
+    }
+
+    /* Add these styles for idea cards */
+    .idea-card {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .idea-card h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .idea-card p {
+        margin-bottom: 0.5rem;
+    }
+
+    .idea-card .price {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .idea-card .tags {
+        display: block;
+        margin-bottom: 1rem;
+        color: #666;
+    }
+
+    .idea-card .view-btn {
+        margin-top: auto;
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: fit-content;
+        align-self: center;
+    }
+
+    .idea-card .view-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* About & Contact Section Styles */
+    .about-contact {
+        padding: 4rem 2rem;
+        background-color: #f8f9fa;
+    }
+
+    .about-contact h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #333;
+        font-size: 2.2rem;
+    }
+
+    .about-contact p {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        line-height: 1.6;
+        color: #666;
+        font-size: 1.1rem;
+    }
+
+    .about-contact form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .about-contact input,
+    .about-contact textarea {
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .about-contact textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .about-contact button {
+        background-color: #007bff;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .about-contact button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive styles for About & Contact */
+    @media screen and (max-width: 768px) {
+        .about-contact {
+            padding: 2rem 1rem;
+        }
+
+        .about-contact h2 {
+            font-size: 1.8rem;
+        }
+
+        .about-contact p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-contact form {
+            padding: 0 1rem;
+        }
+    }
+
+    /* Sell Your Idea Section Styles */
+    .sell-idea {
+        padding: 4rem 2rem;
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    }
+
+    .sell-idea h2 {
+        text-align: center;
+        color: #333;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .sell-idea p {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        color: #666;
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+
+    .idea-form {
+        max-width: 700px;
+        margin: 0 auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .form-group select {
+        background-color: white;
+    }
+
+    .price-input {
+        position: relative;
+    }
+
+    .price-input::before {
+        content: "$";
+        position: absolute;
+        left: 0.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666;
+    }
+
+    .price-input input {
+        padding-left: 1.8rem;
+    }
+
+    .file-upload {
+        border: 2px dashed #ddd;
+        padding: 1.5rem;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+    }
+
+    .file-upload:hover {
+        border-color: #007bff;
+    }
+
+    .submit-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive styles for Sell Idea section */
+    @media screen and (max-width: 768px) {
+        .sell-idea {
+            padding: 2rem 1rem;
+        }
+
+        .sell-idea h2 {
+            font-size: 1.8rem;
+        }
+
+        .sell-idea p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .idea-form {
+            padding: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    }
+
+    /* Idea Listings Section */
+    .idea-listings {
+        padding: 4rem 2rem;
+        background-color: #f8f9fa;
+    }
+
+    .idea-grid {
+        max-width: 1200px;
+        margin: 2rem auto;
+        overflow-x: auto;
+    }
+
+    .idea-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .idea-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .idea-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .idea-card h3 {
+        color: #333;
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+    .idea-card p {
+        color: #666;
+        margin: 0.5rem 0;
+        flex-grow: 1;
+    }
+
+    .price {
+        color: #28a745;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .tags {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    .view-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .view-btn:hover {
+        background: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+        .idea-row {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .idea-card {
+            padding: 1rem;
+        }
+    }
+
+    /* File upload button styling */
+    .sell-idea input[type="file"] {
+        display: none;  /* Hide the default file input */
+    }
+
+    .file-upload-label {
+        display: block;
+        padding: 1rem;
+        background: #f8f9fa;
+        border: 2px dashed #007bff;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .file-upload-label:hover {
+        background: #e9ecef;
+        border-color: #0056b3;
+    }
+
+    .file-upload-label::before {
+        content: '📎 Choose File or drop it from your desktop!';
+        color: #007bff;
+        font-weight: 500;
+    }
+
+    /* Submit button styling */
+    .sell-idea button[type="submit"] {
+        background: #007bff;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        width: 100%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sell-idea button[type="submit"]:hover {
+        background: #0056b3;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+    }
+
+    .sell-idea button[type="submit"]:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+        .file-upload-label {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .sell-idea button[type="submit"] {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+
+    .features-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin: 2rem 0;
+        max-width: 1000px;
+        margin: 3rem auto;
+    }
+
+    .feature-item {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .feature-item h3 {
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    .feature-item p {
+        color: #666;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .about-cta {
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: 500;
+        margin-top: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .features-list {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 2rem auto;
+        }
+
+        .feature-item {
+            padding: 1.5rem;
+        }
+
+        .about-cta {
+            font-size: 1.1rem;
+        }
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-right: 2rem;
+    }
+
+    .theme-toggle {
+        background: none;
+        border: none;
+        color: #333;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        transform: rotate(15deg);
+    }
+
+    [data-theme="dark"] .theme-toggle {
+        color: #ffd700;
+    }
+
+    [data-theme="dark"] .theme-toggle:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    @media screen and (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 70px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background-color: white;
+            flex-direction: column;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links.active {
+            left: 0;
+        }
+
+        .nav-links li {
+            margin: 1.5rem 0;
+        }
+
+        .nav-right {
+            margin-left: auto;
+        }
+
+        .navbar {
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+        }
+
+        .login-btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Auth Modal Styles */
+    .auth-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: white;
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        animation: slideIn 0.3s ease;
+    }
+
+    .close-modal {
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #666;
+    }
+
+    .auth-tabs {
+        display: flex;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #eee;
+    }
+
+    .tab-btn {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: #666;
+        transition: all 0.3s ease;
+    }
+
+    .tab-btn.active {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+    }
+
+    .auth-form {
+        display: none;
+    }
+
+    .auth-form.active {
+        display: block;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .auth-btn {
+        width: 100%;
+        padding: 0.8rem;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .auth-btn:hover {
+        background: #0056b3;
+    }
+
+    .form-footer {
+        text-align: center;
+        margin-top: 1rem;
+        color: #007bff;
+        cursor: pointer;
+    }
+
+    /* Profile Styles */
+    .profile-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+
+    .profile-icon {
+        font-size: 1.5rem;
+        color: #007bff;
+    }
+
+    .username {
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .profile-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 0.5rem 0;
+        min-width: 150px;
+    }
+
+    .profile-container:hover .profile-dropdown {
+        display: block;
+    }
+
+    .profile-dropdown a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #333;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+
+    .profile-dropdown a:hover {
+        background: #f8f9fa;
+    }
+
+    .logout-btn {
+        color: #dc3545 !important;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media screen and (max-width: 768px) {
+        .modal-content {
+            margin: 20px;
+            max-width: none;
+        }
+    }
+    .ceo-section {
+        padding: 5rem 2rem;
+        background: linear-gradient(to right, #f8f9fa, #ffffff);
+    }
+
+    .ceo-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .ceo-image {
+        position: sticky;
+        top: 100px;
+    }
+
+    .ceo-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .ceo-content {
+        padding: 1rem 0;
+    }
+
+    .ceo-content h2 {
+        color: #333;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .ceo-content h3 {
+        color: #007bff;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .designation {
+        display: block;
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+
+    .ceo-message {
+        color: #444;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+
+    .ceo-social {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .ceo-social a {
+        color: #007bff;
+        font-size: 1.5rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .ceo-social a:hover {
+        color: #0056b3;
+        transform: translateY(-3px);
+    }
+
+    @media screen and (max-width: 968px) {
+        .ceo-container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .ceo-image {
+            max-width: 300px;
+            margin: 0 auto;
+            position: relative;
+            top: 0;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .ceo-section {
+            padding: 3rem 1rem;
+        }
+
+        .ceo-content h2 {
+            font-size: 1.8rem;
+        }
+
+        .ceo-content h3 {
+            font-size: 1.5rem;
+        }
+
+        .ceo-message {
+            font-size: 1rem;
+        }
+    }
+    .footer {
+        background-color: #f8f9fa;
+        padding: 4rem 2rem 2rem;
+        color: #333;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+    .footer-section h3 {
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-section ul li a {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 0.95rem;
+    }
+
+    .footer-section ul li a:hover {
+        color: #007bff;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #ddd;
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links a {
+        color: #666;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #007bff;
+    }
+
+    .copyright {
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 968px) {
+        .footer-content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+
+        .footer {
+            padding: 2rem 1rem 1rem;
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .social-links a {
+            margin: 0 0.5rem;
+        }
+    }
+
+    /* View Details Pop up styling */
+    .popup {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .close-popup {
+        float: right;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    /* Directly submit your idea */
+    .submit-idea-btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    .submit-idea-btn:hover {
+        background-color: #0056b3;
+    }
+    
