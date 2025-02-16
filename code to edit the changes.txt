@@ -1,0 +1,27 @@
+1️⃣ Make Changes Locally
+Open your local project folder (e.g., C:/Users/DELL/Desktop/Project - Future/Dev).
+Edit your HTML, CSS, or JavaScript files using VS Code or any code editor.
+Save your changes.
+2️⃣ Add & Commit Changes in Git
+Once you've made changes, open Git Bash (or Command Prompt) and navigate to your project folder:
+
+bash
+Copy
+Edit
+cd "/c/Users/DELL/Desktop/Project - Future/Dev"
+Now, run these commands step by step:
+
+bash
+Copy
+Edit
+git add .                        # Add all changes
+git commit -m "Updated feature X"  # Commit changes with a message
+git push origin main              # Push changes to GitHub
+3️⃣ Wait for GitHub Pages to Update
+After pushing your changes, wait for 1-5 minutes.
+GitHub Pages will automatically update your website with the new changes.
+Refresh your website to see the updates:
+arduino
+Copy
+Edit
+https://creed-web.github.io/Ideamart-website/

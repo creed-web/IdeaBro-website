@@ -632,42 +632,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Making the View Details button functional
 
-// JavaScript for Idea Popup
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("popup");
+    const popupTitle = document.getElementById("popup-title");
+    const popupDescription = document.getElementById("popup-description");
+    const closePopupBtn = document.querySelector(".close-popup");
 
-// Create the popup structure
-const popup = document.createElement('div');
-popup.classList.add('idea-popup');
-popup.style.display = 'none';
-popup.innerHTML = `
-    <div class="popup-content">
-        <span class="close-popup">&times;</span>
-        <h2 id="popup-title"></h2>
-        <p id="popup-description"></p>
-        <button class="buy-now-btn">Buy Now</button>
-    </div>
-`;
-document.body.appendChild(popup);
+    // Function to show the popup with details
+    function showPopup(title, description) {
+        popupTitle.textContent = title;
+        popupDescription.textContent = description;
+        popup.style.display = "flex"; // Make it visible
+    }
 
-// Function to show the popup with idea details
-function showIdeaPopup(title, description) {
-    document.getElementById('popup-title').textContent = title;
-    document.getElementById('popup-description').textContent = description;
-    popup.style.display = 'block';
-}
-
-// Close popup functionality
-document.querySelector('.close-popup').addEventListener('click', () => {
-    popup.style.display = 'none';
-});
-
-// Add event listeners to all 'View Details' buttons
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.view-btn').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const ideaCard = event.target.closest('.idea-card');
-            const title = ideaCard.querySelector('h3').textContent;
-            const description = ideaCard.querySelector('p').textContent;
-            showIdeaPopup(title, description);
+    // Attach event listeners to "View Details" buttons
+    document.querySelectorAll(".view-btn").forEach(button => {
+        button.addEventListener("click", event => {
+            const ideaCard = event.target.closest(".idea-card");
+            const title = ideaCard.querySelector("h3").textContent;
+            const description = ideaCard.querySelector("p").textContent;
+            showPopup(title, description);
         });
+    });
+
+    // Close popup functionality
+    closePopupBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    // Close popup when clicking outside the content
+    popup.addEventListener("click", (event) => {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
     });
 });
